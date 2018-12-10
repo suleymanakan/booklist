@@ -21,7 +21,7 @@ class App extends Component {
   
           <Route path="/" exact render={(props)=>(<HomePage books={this.state.books}{...props}/>)} />
           <Route path= "/new" exact strict component={NewBookPage} />
-          <Route path="/detail/:id" exact strict component={BookDetailPage} />
+          <Route path="/detail/:id" component={(props)=>(<BookDetailPage books={this.state.books}{...props}/>)} />
         </div>
       </Router>
     );

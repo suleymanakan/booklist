@@ -11,6 +11,12 @@ class App extends Component {
       {kitap_no:1, kitap_ad:"Alamut", kitap_yazar:"Süleyman", kitap_yayin:"Sakan", kitap_resim_url:"https://s3.us-east-2.amazonaws.com/yazarokur-kitap/olasiliksiz.jpg"},
       {kitap_no:2, kitap_ad:"Olasılıksız", kitap_yazar:"Coni", kitap_yayin:"Sakan", kitap_resim_url:"https://s3.us-east-2.amazonaws.com/yazarokur-kitap/olasiliksiz.jpg"},
       {kitap_no:3, kitap_ad:"Mavi", kitap_yazar:"Ceni", kitap_yayin:"Sakan", kitap_resim_url:"https://s3.us-east-2.amazonaws.com/yazarokur-kitap/olasiliksiz.jpg"},
+      {kitap_no:4, kitap_ad:"Mavi", kitap_yazar:"Ceni", kitap_yayin:"Sakan", kitap_resim_url:"https://s3.us-east-2.amazonaws.com/yazarokur-kitap/olasiliksiz.jpg"},
+      {kitap_no:1, kitap_ad:"Alamut", kitap_yazar:"Süleyman", kitap_yayin:"Sakan", kitap_resim_url:"https://s3.us-east-2.amazonaws.com/yazarokur-kitap/olasiliksiz.jpg"},
+      {kitap_no:2, kitap_ad:"Olasılıksız", kitap_yazar:"Coni", kitap_yayin:"Sakan", kitap_resim_url:"https://s3.us-east-2.amazonaws.com/yazarokur-kitap/olasiliksiz.jpg"},
+      {kitap_no:3, kitap_ad:"Mavi", kitap_yazar:"Ceni", kitap_yayin:"Sakan", kitap_resim_url:"https://s3.us-east-2.amazonaws.com/yazarokur-kitap/olasiliksiz.jpg"},
+      {kitap_no:4, kitap_ad:"Mavi", kitap_yazar:"Ceni", kitap_yayin:"Sakan", kitap_resim_url:"https://s3.us-east-2.amazonaws.com/yazarokur-kitap/olasiliksiz.jpg"}
+    
     ]
   }
   render() {
@@ -18,10 +24,10 @@ class App extends Component {
       <Router>
         <div className="App">
         <h1> Sakan</h1><br/>
-  
           <Route path="/" exact render={(props)=>(<HomePage books={this.state.books}{...props}/>)} />
           <Route path= "/new" exact strict component={NewBookPage} />
           <Route path="/detail/:id" component={(props)=>(<BookDetailPage books={this.state.books}{...props}/>)} />
+       
         </div>
       </Router>
     );

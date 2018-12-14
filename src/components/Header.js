@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {PropTypes} from 'prop-types';
+import logo_icon from './image';
 import '../App.css';
 import 'semantic-ui-css/semantic.min.css';
 import {Container,Image,Menu,Visibility} from 'semantic-ui-react';
@@ -36,15 +37,22 @@ class Header extends Component{
             filterText: e.target.value
         })
     }
+   /* resultfilt=(no)=>{
+        if(no==-1){
+            console.log("Sonuç Bulunamadı.")
+        }
+    }*/
 
     render(){
         const { menuFixed } = this.state;
-        /*const book = this.props.books.filter(
+       /* const bookFilter = this.props.books;
+         bookFilter.filter(
             books=>{
                 return books.kitap_ad.toLowerCase().indexOf(
                     this.state.filterText.toLowerCase()
                 ) !== -1 }
-        );*/
+         );*/
+        
         return(
             <div>
                 <Visibility
@@ -57,7 +65,7 @@ class Header extends Component{
                         style={menuFixed ? fixedMenuStyle : menuStyle}>
                             <Container text>
                             <Menu.Item>
-                            <Image size='mini' src='https://cdn.icon-icons.com/icons2/325/PNG/256/Letter-S-icon_34798.png' />
+                            <Image size='mini' Src={`${logo_icon} `}/>
                             </Menu.Item>
                             <Menu.Item position='left' header>Sakan Kitap</Menu.Item>
                             <Menu.Item as='a'>Kitaplar</Menu.Item>
@@ -73,12 +81,7 @@ class Header extends Component{
                             </Menu.Item>
                             </Container>
                     </Menu>
-                    <Container >
-                    <Menu position='right' width='100px' >
-                        {/*book.map(book=>
-                            <Menu.Item position='right'>{book.kitap_ad}</Menu.Item>)*/}
-                    </Menu>
-                    </Container>
+                   
                     
                     
                 </Visibility>

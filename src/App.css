@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -17,6 +17,14 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.fromNewBook{
+  
+  color: #61dafb;
+  margin-left: 20%;
+  margin-right:20%;
+  flex-direction: column;
+}
+
 
 .App-link {
   color: #61dafb;

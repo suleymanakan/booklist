@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {PropTypes} from 'prop-types';
+import {Link, NavLink} from 'react-router-dom';
 import logo_icon from './image';
 import '../App.css';
 import 'semantic-ui-css/semantic.min.css';
@@ -67,9 +68,9 @@ class Header extends Component{
                             <Menu.Item>
                             <Image size='mini' Src={`${logo_icon} `}/>
                             </Menu.Item>
-                            <Menu.Item position='left' header>Sakan Kitap</Menu.Item>
-                            <Menu.Item as='a'>Kitaplar</Menu.Item>
-                            <Menu.Item as='a'>Kitap Ekle</Menu.Item>
+                            <Menu.Item position='left' as={Link} to='/' header>Sakan Kitap</Menu.Item>
+                            <Menu.Item as={Link} to='/'>Kitaplar</Menu.Item>
+                            <Menu.Item as={NavLink} to='/new'>Kitap Ekle</Menu.Item>
 
                             <Menu.Item position='right'>
                             <input 

@@ -1,24 +1,27 @@
 import React, {Component} from 'react';
+import '../Card.css';
+import { Card,Grid, Image } from 'semantic-ui-react';
 
 class BookDetail extends Component{
 
     render(){
         const book=this.props.book;
         return(
-            <div><hr/>
-                
-                   
-                            <div> 
-                            {book.kitap_resim_url}
-                            <h5>{book.kitap_ad}</h5>
-                            <h6>{book.kitap_no}</h6>
-                            <h6>{book.kitap_yayin}</h6>
-                            <h6>{book.kitap_yazar}</h6> <hr/>
-
-                            </div>
-                        
-                
-                
+            <div className='bookCardDetail'>
+        
+                <Grid.Column >
+                <Card>
+                    <Image src={book.kitap_resim_url}/>
+    
+                    <Card.Content>
+                    <Card.Header>Kitap Adı: {book.kitap_ad}</Card.Header>
+                    <Card.Description>Kitap No: {book.kitap_no}</Card.Description>
+                    <Card.Description>Yazar: {book.kitap_yazar}</Card.Description>
+                    <Card.Description>Yayın Evi: {book.kitap_yayin}</Card.Description>
+                    </Card.Content>
+                </Card>         
+                </Grid.Column>
+            
             </div>
         )
     }

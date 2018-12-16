@@ -66,7 +66,7 @@ class Header extends Component{
                         style={menuFixed ? fixedMenuStyle : menuStyle}>
                             <Container text>
                             <Menu.Item>
-                            <Image size='mini' Src={`${logo_icon} `}/>
+                            <Image size='mini' Src={logo_icon} />
                             </Menu.Item>
                             <Menu.Item position='left' as={Link} to='/' header>Sakan Kitap</Menu.Item>
                             <Menu.Item as={Link} to='/'>Kitaplar</Menu.Item>

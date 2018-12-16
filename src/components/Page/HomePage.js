@@ -10,7 +10,6 @@ class HomePage extends Component{
     render(){
         return(
             <div>
-                HomePage --> BooksList
             <BooksList books={this.props.books} />
 
             </div>

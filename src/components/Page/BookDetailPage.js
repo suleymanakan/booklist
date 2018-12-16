@@ -13,7 +13,7 @@ static propTypes={
         
         return(
             <div>
-                BookDetailPage --> BookDetail
+               
                 <BookDetail 
                 book={book} />
             </div>
